@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>圣诞快乐</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<div id="back">
+		<div id="carousel"  class="carousel slide carousel-fade carousel-position">
+			<div class="carousel-inner" style="width: 100%;height: 100%;" id="background">
+			</div>
+        </div>
+    </div>
+	<script>
+		var base_path = "./images/start";
+		var index = 0;
+		$(function() {
+			var html = getImgHtml();
+			$("#background").html(html);
+			var start = function() {
+				var rate = 250;
+				var _play = function () {
+					if(index == 677)
+						return;
+					$("#background").children().eq(index).removeClass("active");
+					$("#background").children().eq(index + 1).addClass("active");
+					
+					index++;
+				};
+				setInterval(_play, rate);
+			}();
+		});
+		
+		function getImgHtml(){
+			var html = "";
+			for(var i = 0;i < 677; i++){
+				if(i == 0)
+					html = html + "<div class='item active' style='width: 100%;height: 100%;'>";
+				else
+					html = html + "<div class='item' style='width: 100%;height: 100%;'>";
+				html = html + "<div style='width: 100%;height: 100%;background-image: url("+base_path +"/"+ i +".jpg);background-size: cover;'></div>" +
+								"</div>";
+			}
+			
+			return html;
+		}
+    </script>
+</body>
+</html>
