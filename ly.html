@@ -77,13 +77,11 @@
 		var img_width = 0;
 		var img_height = 0;
 		var scale = 1;
-		var loopInterval;
 
     	$( 'body' ).ready( function() {
 			
 			initImg();
 			
-			loopInterval = setInterval(initImg, 6000);
 		} );
 		
 		function init() {
@@ -141,8 +139,7 @@
 		function initImg(){
 			if(index == size)
 			{
-				clearInterval(loopInterval);
-				return;
+				window.location.href = "love.html";
 			}
 			
 			image.src = "./images/ly/"+ index +".png";
@@ -176,6 +173,8 @@
 				init();
 				
 				index++;
+				
+				setTimeout(initImg, 7200);
 			}
 		}
         
