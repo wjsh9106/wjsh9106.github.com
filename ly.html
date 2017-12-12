@@ -77,12 +77,18 @@
 		var img_width = 0;
 		var img_height = 0;
 		var scale = 1;
+		
+		var img_source = "";
+		for(var i=0;i < size;i++){
+			img_source = img_source + "<img src='./images/ly/"+ i +".png'>";
+		}
+		$("#img_source").html(img_source);
 
-    	$( 'body' ).ready( function() {
+    	window.onload = function() {
 			
 			initImg();
 			
-		} );
+		}
 		
 		function init() {
 
@@ -183,6 +189,6 @@
 <body>
 	<audio src="./青谈 - 绯 (TV Version).mp3" autoplay="true" loop="loop"></audio>
 	<div id='holder' style="background: #fff;z-index:-9999;position: absolute;"></div>
-	
+	<div id="img_source" style="display: none;"></div>
 </body>
 </html>
