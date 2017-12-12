@@ -16,7 +16,7 @@
 
 <div id="mainDiv">
 	<div id="content">
-		<div id="code">
+		<div id="code" style="display: none;">
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*每个人对于爱情都有自己的定义,</span><br />
 			<span class="space"/><span class="comments">*《北京爱情故事》里吴魏有句台词我很喜欢,</span><br />
@@ -58,11 +58,12 @@ window.onload = function(){
 		msg.id = "errorMsg";
 		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
 		document.body.appendChild(msg);
-		$("#code").css("display", "none")
+		$("#code").css("display", "none");
 		$("#copyright").css("position", "absolute");
 		$("#copyright").css("bottom", "10px");
 		document.execCommand("stop");
 	} else {
+		$("#code").css("display", "block");
 		$(".font_zhy").css("font-family", "方正静蕾体");
 		$("#code").typewriter();
 	}
