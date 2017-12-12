@@ -52,7 +52,7 @@
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 
-$(function(){
+window.onload = function(){
 	if (!document.createElement('canvas').getContext) {
 		var msg = document.createElement("div");
 		msg.id = "errorMsg";
@@ -66,7 +66,7 @@ $(function(){
 		$(".font_zhy").css("font-family", "方正静蕾体");
 		$("#code").typewriter();
 	}
-});
+}
 </script>
 
 <style type="text/css">
