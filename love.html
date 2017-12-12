@@ -21,7 +21,7 @@
 
 <div id="mainDiv">
 	<div id="content">
-		<div id="code" style="display: none;">
+		<div id="code">
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">*每个人对于爱情都有自己的定义,</span><br />
 			<span class="space"/><span class="comments">*《北京爱情故事》里吴魏有句台词我很喜欢,</span><br />
@@ -68,8 +68,8 @@ window.onload = function(){
 		$("#copyright").css("bottom", "10px");
 		document.execCommand("stop");
 	} else {
-		$("#code").css("display", "block");
 		$(".font_zhy").css("font-family", "方正静蕾体");
+		
 		$("#code").typewriter();
 	}
 }
