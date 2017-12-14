@@ -6,10 +6,10 @@
 #words{font-family:"sans-serif";width:50%;font-size:20px;margin: 0 auto;color:#666}
 #messages{display:none}
 #elapseClock .digit{font-family:"digit";font-size:36px}
-#loveu{padding:5px;font-size:18px;margin-top:15px;margin-right:20px;text-align:right;display:none}
+#loveu{padding:5px;font-size:20px;margin-top:15px;margin-right:20px;text-align:right;display:none}
 #loveu .signature{margin-top:10px;font-size:16px;font-style:italic}
 #clickSound{display:none}
-#code{width:80%;height:100%;color:#333;margin: 30px auto;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px;display:none}
+#code{width:80%;height:100%;color:#333;margin: 30px auto;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px;}
 #code .string{color:#2a36ff}
 #code .keyword{color:#7f0055;font-weight:bold}
 #code .placeholder{margin-left:15px}#code .space{margin-left:7px}
