@@ -10,8 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 </head>
 <body>
-	<audio style="display:none; height: 0" id="bg-music" preload="auto" src="青谈 - 绯 (TV Version).mp3" loop="loop"></audio>
+	<audio src="./青谈 - 绯 (TV Version).mp3" autoplay="true" loop="loop"></audio>
 	<div id="img_container"" class="htmleaf-container" style="overflow: hidden;">
+		<div id="rplimg00" class="htmleaf-content bgcolor-8" style="margin: 300px auto;margin-bottom: 500px;">
+			<img src="images/loading.gif" />
+		</div>
 		<div class="htmleaf-content bgcolor-8" style="margin: 0 auto;margin-bottom: 500px;">
 			<img id="rplimg0" src="images/ly/0.png" />
 		</div>
@@ -52,6 +55,7 @@
 	var size = 10;
 	var index = 0;
 	window.onload = function(){
+		$("#rplimg00").css("display", "none");
 		$('#rplimg'+index).waterripple({onclick: true});
 	
 		var time = setInterval(function(){
