@@ -89,7 +89,7 @@ function startHeartAnimation() {
 					$("#loveHeart").show();
 					setTimeout(function () {
 						startHeartAnimation();
-					}, 3000);
+					}, 10000);
 				}
 			}, 75);
 		});
@@ -128,7 +128,7 @@ function showMessages() {
 
 function adjustWordsPosition() {
 	$('#words').css("position", "absolute");
-	$('#words').css("top", $("#garden").position().top + 90);
+	$('#words').css("top", $("#garden").position().top + 120);
 	$('#words').css("left", $("#garden").position().left + 120);
 }
 
