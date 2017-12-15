@@ -12,7 +12,7 @@
 <body>
 	<audio src="./青谈 - 绯 (TV Version).mp3" autoplay="true" loop="loop"></audio>
 	<div id="img_container"" class="htmleaf-container" style="overflow: hidden;">
-		<div id="rplimg00" class="htmleaf-content bgcolor-8" style="margin: 300px auto;margin-bottom: 500px;">
+		<div id="rplimg00" class="htmleaf-content bgcolor-8" style="margin-bottom: 500px;">
 			<img src="images/loading.gif" />
 		</div>
 		<div class="htmleaf-content bgcolor-8" style="margin: 0 auto;margin-bottom: 500px;">
@@ -54,6 +54,12 @@
 	<script type="text/javascript">
 	var size = 10;
 	var index = 0;
+	var p_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	var p_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	$("#rplimg00").css("width", "500px");
+	$("#rplimg00").css("height", "500px");
+	$("#rplimg00").css("margin", (p_height - 500) / 2+"px " + (p_width - 500) / 2 +"px 500px");
+	
 	window.onload = function(){
 		$("#rplimg00").css("display", "none");
 		$('#rplimg'+index).waterripple({onclick: true});
