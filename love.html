@@ -15,6 +15,9 @@
 <body>
 
 <div id="mainDiv">
+	<div id="rplimg00" class="htmleaf-content bgcolor-8" style="margin-bottom: 500px;">
+		<img src="images/loading.gif" />
+	</div>
 	<div id="content">
 		<div id="code">
 			<span class="comments">/**</span><br />
@@ -48,10 +51,17 @@
 </div>
 
 <script type="text/javascript">
+var p_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var p_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+$("#rplimg00").css("width", "500px");
+$("#rplimg00").css("height", "500px");
+$("#rplimg00").css("margin", (p_height - 500) / 2+"px " + (p_width - 500) / 2 +"px 500px");
+
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 
 window.onload = function(){
+	$("#rplimg00").css("display", "none");
 	if (!document.createElement('canvas').getContext) {
 		var msg = document.createElement("div");
 		msg.id = "errorMsg";
