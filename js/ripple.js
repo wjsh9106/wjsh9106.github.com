@@ -78,7 +78,7 @@
 			$(this.element.parentNode).css("width", img_width);
 			$(this.element.parentNode).css("height", img_height);
 			if(p_height > img_height)
-			 $("#img_container").css("margin", p_height >= img_height ? (p_height - img_height):(img_height - p_height) / 2+"px auto");
+			 $("#img_container").css("margin", (p_height >= img_height ? (p_height - img_height):0) / 2+"px auto");
 			
             var scope = {};
             scope.canvas		= document.createElement('canvas');
