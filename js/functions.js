@@ -92,7 +92,7 @@ function startHeartAnimation() {
 						$("#loveHeart").show();
 						startHeartAnimation();
 						$("#show_heart")[0].play();
-					}, 10000);
+					}, 20000);
 				}
 			}, 75);
 		});
