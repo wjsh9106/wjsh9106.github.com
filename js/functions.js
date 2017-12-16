@@ -85,11 +85,13 @@ function startHeartAnimation() {
 				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
 				if (progress >= str.length) {
 					clearInterval(timer);
+					$("#show_text")[0].pause();
 					
 					setTimeout(function () {
 						$("#code").hide();
 						$("#loveHeart").show();
 						startHeartAnimation();
+						$("#show_heart")[0].play();
 					}, 10000);
 				}
 			}, 75);
